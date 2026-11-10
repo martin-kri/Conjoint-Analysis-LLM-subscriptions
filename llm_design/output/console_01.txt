@@ -1,0 +1,30 @@
+
+=== Questions with a 'no-brainer' paid plan (lower is better) ===
+             near_dominated strictly_dominated same_assistant_twice
+rotation_9q               4                  0                    0
+Doptimal_9q               3                  0                    1
+Doptimal_12q              5                  0                    3
+Doptimal_15q              5                  0                    1
+
+=== Asymptotic standard errors of the MNL estimates (lower is better) ===
+       design questions   n largest_SE average_SE
+  rotation_9q         9  60      0.185      0.162
+  rotation_9q         9  80      0.160      0.141
+  rotation_9q         9 100      0.143      0.126
+  rotation_9q         9 120      0.131      0.115
+  Doptimal_9q         9  60      0.219      0.155
+  Doptimal_9q         9  80      0.190      0.134
+  Doptimal_9q         9 100      0.170      0.120
+  Doptimal_9q         9 120      0.155      0.109
+ Doptimal_12q        12  60      0.183      0.131
+ Doptimal_12q        12  80      0.158      0.114
+ Doptimal_12q        12 100      0.142      0.102
+ Doptimal_12q        12 120      0.129      0.093
+ Doptimal_15q        15  60      0.157      0.119
+ Doptimal_15q        15  80      0.136      0.103
+ Doptimal_15q        15 100      0.122      0.092
+ Doptimal_15q        15 120      0.111      0.084
+
+real	1m22.029s
+user	1m18.334s
+sys	0m0.120s

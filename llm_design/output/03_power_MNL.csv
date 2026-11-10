@@ -1,0 +1,4 @@
+"n","assistantGemini","assistantClaude","price12.99","price21.99","usage4x","usage10x","extrasCloudStorage","extrasStorageStreaming","free"
+60,0.175,0.5,1,1,0.75,0.975,0.275,0.925,0.875
+80,0.125,0.575,1,1,0.775,1,0.475,0.975,0.9
+100,0.05,0.7,1,1,0.825,1,0.525,1,0.95

@@ -1,0 +1,69 @@
+Assumed (true) WTP for adding streaming to cloud storage: EUR 2.75 per month
+
+   n largest_SE share_choosing_free false_position_effect wtp_streaming
+  60      0.166               0.379                 0.025         2.881
+  80      0.142               0.364                 0.100         2.696
+ 100      0.128               0.374                 0.000         2.540
+
+90% range of the estimated WTP for streaming (EUR/month):
+      5%  95%
+60  0.73 5.30
+80  1.16 4.51
+100 0.66 4.48
+
+Share of simulations in which each estimate is significant (MNL, 5% level).
+Assumed true values:
+       assistantGemini        assistantClaude             price12.99 
+                  -0.2                   -0.4                   -0.9 
+            price21.99                usage4x               usage10x 
+                  -1.8                    0.3                    0.5 
+    extrasCloudStorage extrasStorageStreaming                   free 
+                   0.2                    0.5                    0.3 
+   n assistantGemini assistantClaude price12.99 price21.99 usage4x usage10x
+  60            0.17            0.50          1          1    0.75     0.98
+  80            0.12            0.58          1          1    0.78     1.00
+ 100            0.05            0.70          1          1    0.82     1.00
+ extrasCloudStorage extrasStorageStreaming free
+               0.28                   0.92 0.88
+               0.48                   0.98 0.90
+               0.52                   1.00 0.95
+
+Share of simulations in which each average estimate is significant (mixed MNL):
+   n assistantGemini assistantClaude price12.99 price21.99 usage4x usage10x
+  60             0.5             0.7          1          1     0.6      0.9
+  80             0.2             0.8          1          1     0.6      1.0
+ 100             0.4             0.9          1          1     0.7      1.0
+ extrasCloudStorage extrasStorageStreaming free
+                0.4                    0.9  0.4
+                0.5                    1.0  0.6
+                0.5                    1.0  0.7
+
+Mixed MNL with n = 80 (uncorrelated random effects):
+                          Estimate Std. Error z-value Pr(>|z|)
+assistantGemini             -0.328      0.121  -2.703    0.007
+assistantClaude             -0.408      0.124  -3.287    0.001
+price12.99                  -0.938      0.121  -7.748    0.000
+price21.99                  -1.825      0.176 -10.347    0.000
+usage4x                      0.483      0.122   3.968    0.000
+usage10x                     0.511      0.124   4.125    0.000
+extrasCloudStorage           0.083      0.129   0.646    0.518
+extrasStorageStreaming       0.562      0.124   4.522    0.000
+free                         0.395      0.153   2.587    0.010
+sd.assistantGemini           0.413      0.136   3.034    0.002
+sd.assistantClaude           0.877      0.158   5.566    0.000
+sd.price12.99               -0.366      0.198  -1.844    0.065
+sd.price21.99               -0.278      0.229  -1.212    0.225
+sd.usage4x                   0.427      0.137   3.116    0.002
+sd.usage10x                  0.336      0.171   1.965    0.049
+sd.extrasCloudStorage       -0.156      0.228  -0.683    0.495
+sd.extrasStorageStreaming    0.454      0.152   2.977    0.003
+sd.free                      1.711      0.139  12.311    0.000
+Likelihood ratio test
+
+Model 1: choice ~ assistant + price + usage + extras + free | -1
+Model 2: choice ~ assistant + price + usage + extras + free | -1
+  #Df  LogLik Df  Chisq Pr(>Chisq)    
+1   9 -1200.5                         
+2  18 -1096.2  9 208.79  < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1

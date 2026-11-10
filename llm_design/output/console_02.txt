@@ -1,0 +1,49 @@
+Best candidates (within 10% of the most efficient design):
+ id largest_SE_n80 near_dominated strictly_dominated same_assistant_twice
+ 41          0.151              5                  0                    0
+ 11          0.152              5                  0                    0
+ 45          0.157              5                  0                    0
+ 48          0.159              5                  0                    0
+ 40          0.150              6                  0                    0
+ 16          0.157              6                  0                    0
+  9          0.156              7                  0                    0
+ 10          0.157              7                  0                    0
+
+Chosen design: largest SE at n = 80: 0.151 
+    near_dominated strictly_dominated 
+                 5                  0 
+
+Assistant by position (paid plans only):
+        assistant
+position ChatGPT Claude Gemini
+       1       4      4      4
+       2       4      4      4
+       3       4      4      4
+
+How often each level appears (36 paid-plan profiles):
+
+ChatGPT  Gemini  Claude 
+     12      12      12 
+
+ 5.49 12.99 21.99 
+   15    12     9 
+
+ 2x  4x 10x 
+ 12  12  12 
+
+        NoExtras     CloudStorage StorageStreaming 
+              11               11               14 
+
+Standard errors of each estimate for n = 60 / 80 / 100:
+     assistantGemini assistantClaude price12.99 price21.99 usage4x usage10x
+n60            0.124           0.124      0.117      0.175   0.124    0.125
+n80            0.107           0.107      0.101      0.151   0.107    0.108
+n100           0.096           0.096      0.091      0.135   0.096    0.097
+     extrasCloudStorage extrasStorageStreaming  free
+n60               0.128                  0.128 0.151
+n80               0.111                  0.111 0.130
+n100              0.099                  0.099 0.117
+
+real	2m39.190s
+user	2m37.569s
+sys	0m0.107s
