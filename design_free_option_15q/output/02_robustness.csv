@@ -1,0 +1,9 @@
+"scenario","largest_SE_chosen","largest_SE_rotation","D_error_chosen","D_error_rotation"
+"prior",0.159,0.185,0.634,1.128
+"no_effects",0.127,0.172,0.478,0.748
+"half_as_strong",0.132,0.167,0.533,0.873
+"twice_as_strong",0.263,0.377,0.968,1.985
+"brand_reversed",0.152,0.177,0.582,1.036
+"strong_price",0.295,0.387,0.988,1.96
+"most_stay_free",0.214,0.253,1.09,1.884
+"few_stay_free",0.139,0.178,0.52,0.955

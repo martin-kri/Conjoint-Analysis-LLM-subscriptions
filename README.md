@@ -2,7 +2,7 @@
 
 A choice-based conjoint study of AI assistant subscriptions (ChatGPT, Gemini, Claude). It measures how much people value more usage, bundled extras and the brand itself, in euros per month, and how many would rather stay on a free plan.
 
-**Status (November 2026):** two candidate survey designs are finished and tested by simulation. They differ in how the free alternative is offered. One of them will be fielded in late November; the analysis and results will be added afterwards.
+**Status (November 2026):** two candidate survey designs are finished and tested by simulation, each with 12 and with 15 questions. They differ in how the free alternative is offered. One of them will be fielded in late November; the analysis and results will be added afterwards.
 
 ## Research questions
 
@@ -73,7 +73,24 @@ A Monte Carlo simulation draws respondents with different part-worths, simulates
 - Small effects (0.2 on the logit scale) are detected in only 12% to 52% of simulations in both versions.
 - The assumed part-worths differ slightly between the versions because the levels differ, so the comparison is approximate.
 
-The target is 80 respondents or more. With 40, only the large effects are reliable.
+With 40 to 60 respondents, which is what a convenience sample of this kind realistically reaches, the large effects are reliable and medium-sized effects are found most of the time in the price-level version.
+
+## 12 or 15 questions
+
+More questions per person partly replace more respondents. A 15-question design was built for each version with the same selection rules (`design_price_level_15q/`, `design_free_option_15q/`) and put through the same simulation.
+
+| Respondents | | Price level, 12 q | Price level, 15 q | Free option, 12 q | Free option, 15 q |
+|---|---|---|---|---|---|
+| 40 | Largest SE | 0.205 | 0.188 | 0.202 | 0.184 |
+| 40 | Claude vs ChatGPT detected | 69% | 72% | 42% | 50% |
+| 40 | Streaming bundle detected | 88% | 92% | 80% | 88% |
+| 60 | Largest SE | 0.168 | 0.153 | 0.165 | 0.149 |
+| 60 | Claude vs ChatGPT detected | 82% | 84% | 57% | 64% |
+| 60 | Streaming bundle detected | 96% | 99% | 88% | 96% |
+
+- Standard errors are about 9% smaller with 15 questions, which is worth roughly 20% more respondents: 15 questions with 50 people are about as precise as 12 questions with 60.
+- The gain in detected effects is small in the price-level version (2 to 4 points) and larger in the free-option version (about 8 points). With 200 repetitions, differences of 3 to 4 points are within simulation noise.
+- The cost is a longer survey, with more risk of fatigue and drop-outs.
 
 ## Planned analysis
 
@@ -98,10 +115,11 @@ The target is 80 respondents or more. With 40, only the large effects are reliab
 | `install_packages.R` | Installs the R packages (run once) |
 | `design_price_level/` | Design with free as a price level (EUR 0), restricted to plausible free plans |
 | `design_free_option/` | Design with three paid plans and a fixed "stay free" option |
+| `design_price_level_15q/`, `design_free_option_15q/` | 15-question variants of the two designs: scripts 02 to 04 only, using the settings and step 1 results of the 12-question folder |
 | `references/sources.md` | Price sources and literature |
 | `AI_usage_log.md` | Record of how AI assistance was used |
 
-Each design folder is self-contained and has the same five scripts:
+The two 12-question folders are self-contained and have the same five scripts:
 
 | Script | What it does | Runtime |
 |---|---|---|
@@ -113,7 +131,7 @@ Each design folder is self-contained and has the same five scripts:
 
 Results are in each folder's `output/`: the designs, the simulation tables, the questionnaire (`04_questionnaire.txt`) and the console output of every script.
 
-To reproduce: run `install_packages.R`, set the working directory to one of the design folders, then run scripts 01 to 04 in order. Seeds are fixed. Results were produced with R 4.3.3, support.CEs 0.7.0, idefix 1.1.0 and mlogit 2.0.0.
+To reproduce: run `install_packages.R`, set the working directory to one of the design folders, then run scripts 01 to 04 in order (02 to 04 in a 15-question folder). Seeds are fixed. Results were produced with R 4.3.3, support.CEs 0.7.0, idefix 1.1.0 and mlogit 2.0.0.
 
 ## Survey protocol
 

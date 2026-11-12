@@ -17,3 +17,5 @@
 - **Documentation.** Updated `README.md`, `references/sources.md` and the project explainer to match.
 - **Review.** Reviewed the design choices, scripts and documentation. Added a robustness check of the chosen design against wrong prior guesses, raised the simulation from 40 to 200 repetitions (10 to 30 for the mixed logit), added willingness to pay from the paid price range, and rewrote the README with literature references.
 - **Two candidate designs.** Prepared two self-contained versions: `design_price_level/` (EUR 0 as a price level, with implausible free plans removed from the candidate set) and `design_free_option/` (three paid plans plus a fixed "stay free" option). Reran the design comparison, robustness check and sample-size simulation for both and updated the README.
+- **15-question variants.** Built and simulated a 15-question design for each version (`design_price_level_15q/`, `design_free_option_15q/`) to compare with 12 questions at realistic sample sizes, and added the comparison to the README.
+- **Team document.** Wrote an explainer for the team describing both options, the simulation results and the open decisions.
