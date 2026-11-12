@@ -1,0 +1,86 @@
+Assumed (true) WTP for adding streaming to cloud storage: EUR 2.86 per month
+
+   n largest_SE share_choosing_free_plan false_position_effect price_not_linear
+  40      0.205                    0.276                  0.02            0.125
+  60      0.168                    0.276                  0.06            0.110
+  80      0.144                    0.274                  0.02            0.115
+ 100      0.129                    0.277                  0.02            0.165
+ wtp_streaming
+         3.103
+         2.970
+         3.065
+         3.047
+
+90% range of the estimated WTP for streaming (EUR/month), price as a number:
+      5%  50%  95%
+40  0.06 3.11 5.97
+60  0.55 2.91 5.26
+80  1.17 3.05 5.29
+100 1.31 3.10 4.61
+
+Same, using only the price step from EUR 7.99 to EUR 20.99
+(the fallback if a free plan turns out to be valued differently from a cheap one):
+      5%  50%  95%
+40  0.37 3.41 6.44
+60  0.87 3.23 6.22
+80  1.44 3.37 5.42
+100 1.35 3.24 4.93
+
+Share of simulations in which each estimate is significant (MNL, 5% level).
+Assumed true values:
+       assistantGemini        assistantClaude              price7.99 
+                 -0.20                  -0.40                  -0.84 
+            price20.99                usage4x               usage10x 
+                 -2.20                   0.40                   0.60 
+    extrasCloudStorage extrasStorageStreaming 
+                  0.20                   0.50 
+   n assistantGemini assistantClaude price7.99 price20.99 usage4x usage10x
+  40            0.20            0.69      0.99          1    0.82     0.95
+  60            0.30            0.82      1.00          1    0.92     1.00
+  80            0.44            0.94      1.00          1    0.98     1.00
+ 100            0.41            0.94      1.00          1    1.00     1.00
+ extrasCloudStorage extrasStorageStreaming
+               0.21                   0.88
+               0.38                   0.96
+               0.40                   1.00
+               0.49                   1.00
+
+Share of simulations in which each average estimate is significant (mixed MNL):
+   n assistantGemini assistantClaude price7.99 price20.99 usage4x usage10x
+  40            0.33            0.73         1          1    0.73     0.87
+  60            0.33            0.80         1          1    0.97     1.00
+  80            0.43            0.97         1          1    1.00     1.00
+ 100            0.67            0.97         1          1    1.00     1.00
+ extrasCloudStorage extrasStorageStreaming
+               0.40                   0.90
+               0.37                   0.87
+               0.63                   1.00
+               0.47                   1.00
+
+Mixed MNL with n = 80 (uncorrelated random effects):
+                          Estimate Std. Error z-value Pr(>|z|)
+assistantGemini             -0.217      0.095  -2.275    0.023
+assistantClaude             -0.602      0.107  -5.615    0.000
+price7.99                   -1.012      0.121  -8.345    0.000
+price20.99                  -2.372      0.195 -12.160    0.000
+usage4x                      0.459      0.101   4.548    0.000
+usage10x                     0.722      0.122   5.944    0.000
+extrasCloudStorage           0.194      0.095   2.041    0.041
+extrasStorageStreaming       0.513      0.115   4.471    0.000
+sd.assistantGemini           0.198      0.187   1.056    0.291
+sd.assistantClaude           0.770      0.153   5.033    0.000
+sd.price7.99                 0.295      0.166   1.781    0.075
+sd.price20.99                0.704      0.205   3.428    0.001
+sd.usage4x                   0.329      0.167   1.972    0.049
+sd.usage10x                  0.590      0.139   4.244    0.000
+sd.extrasCloudStorage        0.422      0.143   2.944    0.003
+sd.extrasStorageStreaming    0.584      0.145   4.020    0.000
+Likelihood ratio test
+
+Model 1: choice ~ assistant + price + usage + extras | -1
+Model 2: choice ~ assistant + price + usage + extras | -1
+  #Df  LogLik Df  Chisq Pr(>Chisq)    
+1   8 -948.87                         
+2  16 -918.66  8 60.417   3.86e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1

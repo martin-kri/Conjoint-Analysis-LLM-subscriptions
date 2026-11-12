@@ -1,0 +1,37 @@
+
+=== Quality checks: number of questions with a problem ===
+                questions near_dominated strictly_dominated
+rotation_9q             9              4                  0
+LMA_27q_3blocks        27             22                  6
+Doptimal_9q             9              3                  0
+Doptimal_12q           12              5                  0
+Doptimal_15q           15              5                  0
+                same_assistant_twice identical_plans
+rotation_9q                        0               0
+LMA_27q_3blocks                    9               3
+Doptimal_9q                        1               0
+Doptimal_12q                       3               0
+Doptimal_15q                       1               0
+
+=== Asymptotic standard errors of the MNL estimates (lower is better) ===
+          design questions_per_person versions   n largest_SE average_SE
+     rotation_9q                    9        1  40      0.227      0.199
+     rotation_9q                    9        1  60      0.185      0.162
+     rotation_9q                    9        1  80      0.160      0.141
+     rotation_9q                    9        1 100      0.143      0.126
+ LMA_27q_3blocks                    9        3  40      0.246      0.208
+ LMA_27q_3blocks                    9        3  60      0.201      0.170
+ LMA_27q_3blocks                    9        3  80      0.174      0.147
+ LMA_27q_3blocks                    9        3 100      0.156      0.132
+     Doptimal_9q                    9        1  40      0.268      0.189
+     Doptimal_9q                    9        1  60      0.219      0.155
+     Doptimal_9q                    9        1  80      0.190      0.134
+     Doptimal_9q                    9        1 100      0.170      0.120
+    Doptimal_12q                   12        1  40      0.224      0.161
+    Doptimal_12q                   12        1  60      0.183      0.131
+    Doptimal_12q                   12        1  80      0.158      0.114
+    Doptimal_12q                   12        1 100      0.142      0.102
+    Doptimal_15q                   15        1  40      0.192      0.145
+    Doptimal_15q                   15        1  60      0.157      0.119
+    Doptimal_15q                   15        1  80      0.136      0.103
+    Doptimal_15q                   15        1 100      0.122      0.092

@@ -1,7 +1,7 @@
 # Sources used to set the attribute levels
 
 ## LLM subscriptions
-Price levels since 12 November 2026: EUR 0 / 7.99 / 20.99. EUR 7.99 is close to ChatGPT Go (about EUR 8) and EUR 20.99 to the regular price of the paid plans (about EUR 21-25). The lecturer confirmed that the levels do not have to match real prices exactly.
+Two designs are prepared. The free-option version uses Google's real student and regular prices (EUR 5.49 / 12.99 / 21.99). The price-level version uses EUR 0 / 7.99 / 20.99: EUR 7.99 is close to ChatGPT Go (about EUR 8) and EUR 20.99 to the regular price of the paid plans (about EUR 21-25).
 
 - Google student offers in Italy: screenshot `google_student_offers_screenshot_2026-11-08.png` (AI Pro EUR 5.49/month for up to 4 years, AI Pro + YouTube Premium EUR 12.99/month, then EUR 21.99/month)
 - Gemini usage limits by plan (AI Plus 2x, AI Pro 4x the standard limits): https://support.google.com/gemini/answer/17004136
@@ -15,7 +15,11 @@ Price levels since 12 November 2026: EUR 0 / 7.99 / 20.99. EUR 7.99 is close to 
 - AI use among Italian university students (83% have used it, 49% regularly): https://www.studentville.it/utilizzo-ia-ambito-accademico-rivoluzione-trasversale/
 
 
-## Course material used
-- `Guidelines_for_the exam_project.pdf`
-- Lab scripts: `Fractional_Factorial_Designs.R`, `Optimal_Designs.R`, `Simulations_for_sample_size.R`, `Choice_Based_Conjoint_MNL_model.R`
-- Rao (2014), *Applied Conjoint Analysis*: section 2.4 (selecting attributes and levels), section 4.4 (choice set design), table 4.21
+## Literature
+- Aizaki, H. (2012). Basic functions for supporting an implementation of choice experiments in R. *Journal of Statistical Software*, 50(Code Snippet 2). (`support.CEs`: rotation, mix-and-match and L^MA designs)
+- Chapman, C., & Feit, E. M. (2019). *R for Marketing Research and Analytics* (2nd ed.). Springer. (choice modelling, share prediction, sample-size simulation)
+- Croissant, Y. (2020). Estimation of random utility models in R: The mlogit package. *Journal of Statistical Software*, 95(11).
+- Louviere, J. J., Hensher, D. A., & Swait, J. D. (2000). *Stated Choice Methods: Analysis and Applications*. Cambridge University Press. (choice set construction)
+- Rao, V. R. (2014). *Applied Conjoint Analysis*. Springer. (section 2.4 on selecting attributes and levels, section 2.5.8 on removing implausible profiles, section 4.4 on choice set design)
+- Shampanier, K., Mazar, N., & Ariely, D. (2007). Zero as a special price: The true value of free products. *Marketing Science*, 26(6).
+- Traets, F., Sanchez, D. G., & Vandebroek, M. (2020). Generating optimal designs for discrete choice experiments in R: The idefix package. *Journal of Statistical Software*, 96(3).

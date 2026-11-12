@@ -1,0 +1,88 @@
+Best candidates (within 10% of the most efficient design):
+ id largest_SE_n80 near_dominated strictly_dominated same_assistant_twice
+ 17          0.151              3                  0                    0
+ 19          0.153              3                  0                    0
+ 44          0.153              3                  0                    0
+ 33          0.146              4                  0                    0
+ 39          0.149              4                  0                    0
+ 37          0.151              4                  0                    0
+ 45          0.151              4                  0                    0
+ 47          0.152              4                  0                    0
+
+Chosen design: largest SE at n = 80: 0.151 
+      near_dominated   strictly_dominated same_assistant_twice 
+                   3                    0                    0 
+forbidden_free_plans 
+                   0 
+
+Free plans in the design (never 10x usage, never streaming):
+ QES assistant usage       extras
+   1   ChatGPT    1x     NoExtras
+   4    Gemini    1x     NoExtras
+   6    Claude    1x CloudStorage
+   7    Claude    4x     NoExtras
+  10    Gemini    1x CloudStorage
+  11    Claude    4x     NoExtras
+  12   ChatGPT    4x CloudStorage
+
+Assistant by position:
+        assistant
+position ChatGPT Claude Gemini
+       1       4      4      4
+       2       4      4      4
+       3       4      4      4
+
+How often each level appears (36 plans in total):
+
+ChatGPT  Gemini  Claude 
+     12      12      12 
+
+    0  7.99 20.99 
+    7    18    11 
+
+ 1x  4x 10x 
+ 12  13  11 
+
+        NoExtras     CloudStorage StorageStreaming 
+              13               12               11 
+
+Questions that contain a free (EUR 0) plan: 7 of 12 
+
+Standard errors of each estimate for n = 40 / 60 / 80 / 100:
+     assistantGemini assistantClaude price7.99 price20.99 usage4x usage10x
+n40            0.121           0.121     0.143      0.214   0.122    0.145
+n60            0.099           0.099     0.117      0.174   0.100    0.119
+n80            0.086           0.086     0.101      0.151   0.086    0.103
+n100           0.077           0.077     0.090      0.135   0.077    0.092
+     extrasCloudStorage extrasStorageStreaming
+n40               0.118                  0.133
+n60               0.096                  0.109
+n80               0.083                  0.094
+n100              0.075                  0.084
+
+Assistant by price (number of plans):
+         price
+assistant 0 7.99 20.99
+  ChatGPT 2    5     5
+  Gemini  2    6     4
+  Claude  3    7     2
+
+Robustness to wrong prior guesses (n = 60; lower is better):
+                largest_SE_chosen largest_SE_rotation D_error_chosen
+prior                       0.174               0.175          0.586
+no_effects                  0.159               0.105          0.512
+half_as_strong              0.159               0.123          0.523
+twice_as_strong             0.257               0.439          0.869
+brand_reversed              0.185               0.181          0.609
+strong_price                0.251               0.429          0.917
+free_is_special             0.189               0.221          0.701
+weak_price                  0.160               0.124          0.530
+                D_error_rotation
+prior                      0.966
+no_effects                 0.577
+half_as_strong             0.670
+twice_as_strong            2.538
+brand_reversed             0.961
+strong_price               2.516
+free_is_special            1.641
+weak_price                 0.667

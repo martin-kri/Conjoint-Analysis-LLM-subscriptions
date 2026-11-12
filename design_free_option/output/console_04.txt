@@ -1,0 +1,89 @@
+INTRODUCTION SHOWN TO RESPONDENTS (draft)
+Imagine that next semester you decide whether to pay for ONE AI assistant, mainly for your studies/work.
+In each of the following 12 questions you will see three paid plans and the option to keep using only the free versions.
+Usage is described as providers do: as a multiple of the free version (1x = what you get today for free).
+Plans differ only in the characteristics shown. Please choose the option you would really pick.
+
+Question 1 of 12: Which option would you choose?
+                Option A             Option B            Option C                                Option D                                 
+Assistant       Gemini               ChatGPT             Claude                                  I would keep using only the free versions
+Price           EUR 12.99 / month    EUR 5.49 / month    EUR 5.49 / month                                                                 
+Usage           10x the free version 2x the free version 4x the free version                                                              
+Included extras Cloud storage        Nothing extra       Cloud storage + music & video streaming                                          
+
+Question 2 of 12: Which option would you choose?
+                Option A                                Option B             Option C                                Option D                                 
+Assistant       Gemini                                  Claude               ChatGPT                                 I would keep using only the free versions
+Price           EUR 12.99 / month                       EUR 5.49 / month     EUR 21.99 / month                                                                
+Usage           2x the free version                     10x the free version 4x the free version                                                              
+Included extras Cloud storage + music & video streaming Cloud storage        Cloud storage + music & video streaming                                          
+
+Question 3 of 12: Which option would you choose?
+                Option A            Option B            Option C                                Option D                                 
+Assistant       Claude              ChatGPT             Gemini                                  I would keep using only the free versions
+Price           EUR 5.49 / month    EUR 12.99 / month   EUR 21.99 / month                                                                
+Usage           4x the free version 2x the free version 10x the free version                                                             
+Included extras Nothing extra       Cloud storage       Cloud storage + music & video streaming                                          
+
+Question 4 of 12: Which option would you choose?
+                Option A                                Option B            Option C             Option D                                 
+Assistant       ChatGPT                                 Claude              Gemini               I would keep using only the free versions
+Price           EUR 12.99 / month                       EUR 5.49 / month    EUR 5.49 / month                                              
+Usage           4x the free version                     2x the free version 10x the free version                                          
+Included extras Cloud storage + music & video streaming Nothing extra       Cloud storage                                                 
+
+Question 5 of 12: Which option would you choose?
+                Option A                                Option B            Option C             Option D                                 
+Assistant       Gemini                                  ChatGPT             Claude               I would keep using only the free versions
+Price           EUR 21.99 / month                       EUR 5.49 / month    EUR 12.99 / month                                             
+Usage           4x the free version                     2x the free version 10x the free version                                          
+Included extras Cloud storage + music & video streaming Cloud storage       Nothing extra                                                 
+
+Question 6 of 12: Which option would you choose?
+                Option A                                Option B            Option C                                Option D                                 
+Assistant       Gemini                                  ChatGPT             Claude                                  I would keep using only the free versions
+Price           EUR 12.99 / month                       EUR 5.49 / month    EUR 21.99 / month                                                                
+Usage           2x the free version                     4x the free version 10x the free version                                                             
+Included extras Cloud storage + music & video streaming Nothing extra       Cloud storage + music & video streaming                                          
+
+Question 7 of 12: Which option would you choose?
+                Option A             Option B            Option C                                Option D                                 
+Assistant       Claude               Gemini              ChatGPT                                 I would keep using only the free versions
+Price           EUR 21.99 / month    EUR 12.99 / month   EUR 21.99 / month                                                                
+Usage           10x the free version 4x the free version 2x the free version                                                              
+Included extras Nothing extra        Cloud storage       Cloud storage + music & video streaming                                          
+
+Question 8 of 12: Which option would you choose?
+                Option A                                Option B            Option C            Option D                                 
+Assistant       ChatGPT                                 Claude              Gemini              I would keep using only the free versions
+Price           EUR 5.49 / month                        EUR 5.49 / month    EUR 12.99 / month                                            
+Usage           10x the free version                    2x the free version 4x the free version                                          
+Included extras Cloud storage + music & video streaming Cloud storage       Nothing extra                                                
+
+Question 9 of 12: Which option would you choose?
+                Option A            Option B                                Option C            Option D                                 
+Assistant       ChatGPT             Claude                                  Gemini              I would keep using only the free versions
+Price           EUR 21.99 / month   EUR 12.99 / month                       EUR 5.49 / month                                             
+Usage           4x the free version 10x the free version                    2x the free version                                          
+Included extras Cloud storage       Cloud storage + music & video streaming Nothing extra                                                
+
+Question 10 of 12: Which option would you choose?
+                Option A            Option B                                Option C             Option D                                 
+Assistant       Claude              Gemini                                  ChatGPT              I would keep using only the free versions
+Price           EUR 12.99 / month   EUR 5.49 / month                        EUR 21.99 / month                                             
+Usage           2x the free version 4x the free version                     10x the free version                                          
+Included extras Nothing extra       Cloud storage + music & video streaming Cloud storage                                                 
+
+Question 11 of 12: Which option would you choose?
+                Option A            Option B                                Option C             Option D                                 
+Assistant       Claude              Gemini                                  ChatGPT              I would keep using only the free versions
+Price           EUR 5.49 / month    EUR 21.99 / month                       EUR 12.99 / month                                             
+Usage           4x the free version 2x the free version                     10x the free version                                          
+Included extras Cloud storage       Cloud storage + music & video streaming Nothing extra                                                 
+
+Question 12 of 12: Which option would you choose?
+                Option A            Option B             Option C                                Option D                                 
+Assistant       ChatGPT             Gemini               Claude                                  I would keep using only the free versions
+Price           EUR 12.99 / month   EUR 5.49 / month     EUR 5.49 / month                                                                 
+Usage           4x the free version 10x the free version 2x the free version                                                              
+Included extras Cloud storage       Nothing extra        Cloud storage + music & video streaming                                          
