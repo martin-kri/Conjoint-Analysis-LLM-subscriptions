@@ -1,49 +1,53 @@
 Best candidates (within 10% of the most efficient design):
  id largest_SE_n80 near_dominated strictly_dominated same_assistant_twice
- 41          0.151              5                  0                    0
- 11          0.152              5                  0                    0
- 45          0.157              5                  0                    0
- 48          0.159              5                  0                    0
- 40          0.150              6                  0                    0
- 16          0.157              6                  0                    0
-  9          0.156              7                  0                    0
- 10          0.157              7                  0                    0
+ 41          0.145              2                  0                    0
+ 28          0.142              3                  0                    0
+ 34          0.139              4                  0                    0
+ 27          0.144              4                  0                    0
+ 21          0.135              5                  0                    0
+ 44          0.138              5                  0                    0
+ 19          0.142              5                  0                    0
+  9          0.143              5                  0                    0
 
-Chosen design: largest SE at n = 80: 0.151 
-    near_dominated strictly_dominated 
-                 5                  0 
+Chosen design: largest SE at n = 80: 0.145 
+      near_dominated   strictly_dominated same_assistant_twice 
+                   2                    0                    0 
 
-Assistant by position (paid plans only):
+Assistant by position:
         assistant
 position ChatGPT Claude Gemini
        1       4      4      4
        2       4      4      4
        3       4      4      4
 
-How often each level appears (36 paid-plan profiles):
+How often each level appears (36 plans in total):
 
 ChatGPT  Gemini  Claude 
      12      12      12 
 
- 5.49 12.99 21.99 
-   15    12     9 
+    0  7.99 20.99 
+   11    13    12 
 
- 2x  4x 10x 
+ 1x  4x 10x 
  12  12  12 
 
         NoExtras     CloudStorage StorageStreaming 
-              11               11               14 
+              12               11               13 
 
-Standard errors of each estimate for n = 60 / 80 / 100:
-     assistantGemini assistantClaude price12.99 price21.99 usage4x usage10x
-n60            0.124           0.124      0.117      0.175   0.124    0.125
-n80            0.107           0.107      0.101      0.151   0.107    0.108
-n100           0.096           0.096      0.091      0.135   0.096    0.097
-     extrasCloudStorage extrasStorageStreaming  free
-n60               0.128                  0.128 0.151
-n80               0.111                  0.111 0.130
-n100              0.099                  0.099 0.117
+Questions that contain a free (EUR 0) plan: 9 of 12 
 
-real	2m39.190s
-user	2m37.569s
-sys	0m0.107s
+Standard errors of each estimate for n = 40 / 60 / 80 / 100:
+     assistantGemini assistantClaude price7.99 price20.99 usage4x usage10x
+n40            0.127           0.130     0.123      0.205   0.125    0.144
+n60            0.104           0.106     0.101      0.167   0.102    0.118
+n80            0.090           0.092     0.087      0.145   0.088    0.102
+n100           0.080           0.082     0.078      0.129   0.079    0.091
+     extrasCloudStorage extrasStorageStreaming
+n40               0.124                  0.131
+n60               0.101                  0.107
+n80               0.088                  0.093
+n100              0.079                  0.083
+
+real	2m35.828s
+user	2m34.453s
+sys	0m0.066s

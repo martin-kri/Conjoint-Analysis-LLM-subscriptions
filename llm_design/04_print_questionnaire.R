@@ -8,15 +8,16 @@ options(width = 200)
 source("00_settings_and_helpers.R")
 des <- read.csv("output/02_chosen_design_12q.csv", colClasses = "character")
 des$QES <- as.integer(des$QES); des$ALT <- as.integer(des$ALT)
-opt_names <- c("Option A", "Option B", "Option C", "Option D")
+opt_names <- c("Option A", "Option B", "Option C")
 rows <- c("Assistant", "Price", "Usage", "Included extras")
 
 intro <- c(
   "INTRODUCTION SHOWN TO RESPONDENTS (draft)",
-  "Imagine that next semester you decide whether to pay for ONE AI assistant, mainly for your studies/work.",
-  "In each of the following 12 questions you will see three paid plans and the option to keep using only the free versions.",
-  "Usage is described as providers do: as a multiple of the free version (1x = what you get today for free).",
-  "Plans differ only in the characteristics shown. Please choose the option you would really pick.",
+  "Imagine that next semester you choose ONE AI assistant plan, mainly for your studies/work.",
+  "In each of the following 12 questions you will see three plans. Some are free, some are paid.",
+  "Usage is described as providers do: as a multiple of what today's free version allows.",
+  "Some plans may not exist in reality. Plans differ only in the characteristics shown.",
+  "Please choose the plan you would really pick.",
   "")
 
 out <- intro
@@ -25,9 +26,8 @@ for (q in sort(unique(des$QES))) {
   d <- des[des$QES == q, ][order(des$ALT[des$QES == q]), ]
   tab <- rbind(labels$assistant[d$assistant], labels$price[d$price],
                labels$usage[d$usage], labels$extras[d$extras])
-  tab <- cbind(tab, c(free_option_label, "", "", ""))
   dimnames(tab) <- list(rows, opt_names)
-  out <- c(out, sprintf("Question %d of %d: Which option would you choose?", q, max(des$QES)),
+  out <- c(out, sprintf("Question %d of %d: Which plan would you choose?", q, max(des$QES)),
            capture.output(print(noquote(tab))), "")
   wide <- rbind(wide, data.frame(question = q, row = rows, tab, check.names = FALSE))
 }

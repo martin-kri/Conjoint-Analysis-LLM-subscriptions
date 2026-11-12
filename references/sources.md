@@ -1,6 +1,8 @@
 # Sources used to set the attribute levels
 
 ## LLM subscriptions
+Price levels since 12 November 2026: EUR 0 / 7.99 / 20.99. EUR 7.99 is close to ChatGPT Go (about EUR 8) and EUR 20.99 to the regular price of the paid plans (about EUR 21-25). The lecturer confirmed that the levels do not have to match real prices exactly.
+
 - Google student offers in Italy: screenshot `google_student_offers_screenshot_2026-11-08.png` (AI Pro EUR 5.49/month for up to 4 years, AI Pro + YouTube Premium EUR 12.99/month, then EUR 21.99/month)
 - Gemini usage limits by plan (AI Plus 2x, AI Pro 4x the standard limits): https://support.google.com/gemini/answer/17004136
 - Gemini limits are compute-based, with no fixed number of prompts: https://www.ai-toolbox.co/gemini-management-and-productivity/gemini-usage-limits-2026
