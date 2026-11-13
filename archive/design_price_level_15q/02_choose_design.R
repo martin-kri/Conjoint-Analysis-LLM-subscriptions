@@ -3,12 +3,12 @@
 ### and balance which assistant appears in which position               ###
 ###                                                                       ###
 ### 15-question variant. Uses the settings (and the step 1 results) of   ###
-### ../design_price_level/, so keep both folders side by side.        ###
+### ../../design_price_level/, so keep the folder layout of the repo.   ###
 ### Before running: set the working directory to THIS folder             ###
 ### Runtime: about 3-5 minutes                                           ###
 ###########################################################################
 suppressMessages({library(idefix); library(MASS)})
-source("../design_price_level/00_settings_and_helpers.R")   # same settings as the 12-question version
+source("../../design_price_level/00_settings_and_helpers.R")   # same settings as the 12-question version
 n_sets <- 15
 
 # Generate 6 x 8 = 48 candidate designs (different random starts)
@@ -72,7 +72,7 @@ print(table(assistant = factor(chosen$assistant, attrib$assistant),
 # Robustness: the design was built on prior guesses. How precise is it if the
 # true part-worths are different? Compared with the rotation design from step 1,
 # which does not depend on any prior. Largest SE and D-error for n = 60.
-rot_file <- "../design_price_level/output/01_design_rotation_9q.csv"
+rot_file <- "../../design_price_level/output/01_design_rotation_9q.csv"
 rot <- if (file.exists(rot_file)) read.csv(rot_file, colClasses = "character") else NULL
 if (!is.null(rot)) { rot$QES <- as.integer(rot$QES); rot$ALT <- as.integer(rot$ALT) }
 robust <- t(sapply(scenarios, function(b) c(

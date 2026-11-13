@@ -1,7 +1,7 @@
 # Sources used to set the attribute levels
 
 ## LLM subscriptions
-Two designs are prepared. The free-option version uses Google's real student and regular prices (EUR 5.49 / 12.99 / 21.99). The price-level version uses EUR 0 / 7.99 / 20.99: EUR 7.99 is close to ChatGPT Go (about EUR 8) and EUR 20.99 to the regular price of the paid plans (about EUR 21-25).
+The final design (`design_price_level/`) uses EUR 0 / 7.99 / 20.99: EUR 0 is today's free tier, EUR 7.99 is close to ChatGPT Go (about EUR 8) and EUR 20.99 to the regular price of the paid plans (about EUR 21-25). The archived free-option design used Google's real student and regular prices (EUR 5.49 / 12.99 / 21.99).
 
 - Google student offers in Italy: screenshot `google_student_offers_screenshot_2026-11-08.png` (AI Pro EUR 5.49/month for up to 4 years, AI Pro + YouTube Premium EUR 12.99/month, then EUR 21.99/month)
 - Gemini usage limits by plan (AI Plus 2x, AI Pro 4x the standard limits): https://support.google.com/gemini/answer/17004136
@@ -17,8 +17,10 @@ Two designs are prepared. The free-option version uses Google's real student and
 
 ## Literature
 - Aizaki, H. (2012). Basic functions for supporting an implementation of choice experiments in R. *Journal of Statistical Software*, 50(Code Snippet 2). (`support.CEs`: rotation, mix-and-match and L^MA designs)
+- Bansak, K., Hainmueller, J., Hopkins, D. J., & Yamamoto, T. (2018). The number of choice tasks and survey satisficing in conjoint experiments. *Political Analysis*, 26(1). (how many choice questions respondents can answer)
 - Chapman, C., & Feit, E. M. (2019). *R for Marketing Research and Analytics* (2nd ed.). Springer. (choice modelling, share prediction, sample-size simulation)
 - Croissant, Y. (2020). Estimation of random utility models in R: The mlogit package. *Journal of Statistical Software*, 95(11).
+- Johnson, R. M., & Orme, B. K. (1996). How many questions should you ask in choice-based conjoint studies? Sawtooth Software Research Paper Series. (more questions per person trade off against more respondents)
 - Louviere, J. J., Hensher, D. A., & Swait, J. D. (2000). *Stated Choice Methods: Analysis and Applications*. Cambridge University Press. (choice set construction)
 - Rao, V. R. (2014). *Applied Conjoint Analysis*. Springer. (section 2.4 on selecting attributes and levels, section 2.5.8 on removing implausible profiles, section 4.4 on choice set design)
 - Shampanier, K., Mazar, N., & Ariely, D. (2007). Zero as a special price: The true value of free products. *Marketing Science*, 26(6).

@@ -1,10 +1,10 @@
 ###########################################################################
-options(width = 200)
 ### LLM subscriptions - Step 4: print the questionnaire in readable form ###
 ### (to copy into Google Forms or to turn into images)                   ###
 ###                                                                       ###
 ### Before running: set the working directory to THIS folder             ###
 ###########################################################################
+options(width = 200)
 source("00_settings_and_helpers.R")
 des <- read.csv("output/02_chosen_design_12q.csv", colClasses = "character")
 des$QES <- as.integer(des$QES); des$ALT <- as.integer(des$ALT)
@@ -13,7 +13,7 @@ rows <- c("Assistant", "Price", "Usage", "Included extras")
 
 intro <- c(
   "INTRODUCTION SHOWN TO RESPONDENTS (draft)",
-  "Imagine that next semester you choose ONE AI assistant plan, mainly for your studies/work.",
+  "Imagine that from next month you choose ONE AI assistant plan, mainly for your studies or work.",
   "In each of the following 12 questions you will see three plans. Some are free, some are paid.",
   "Usage is described as providers do: as a multiple of what today's free version allows.",
   "Some plans do not exist today. Plans differ only in the characteristics shown.",

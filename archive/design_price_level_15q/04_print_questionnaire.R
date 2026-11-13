@@ -4,10 +4,10 @@ options(width = 200)
 ### (to copy into Google Forms or to turn into images)                   ###
 ###                                                                       ###
 ### 15-question variant. Uses the settings (and the step 1 results) of   ###
-### ../design_price_level/, so keep both folders side by side.        ###
+### ../../design_price_level/, so keep the folder layout of the repo.   ###
 ### Before running: set the working directory to THIS folder             ###
 ###########################################################################
-source("../design_price_level/00_settings_and_helpers.R")   # same settings as the 12-question version
+source("../../design_price_level/00_settings_and_helpers.R")   # same settings as the 12-question version
 des <- read.csv("output/02_chosen_design_15q.csv", colClasses = "character")
 des$QES <- as.integer(des$QES); des$ALT <- as.integer(des$ALT)
 opt_names <- c("Option A", "Option B", "Option C")

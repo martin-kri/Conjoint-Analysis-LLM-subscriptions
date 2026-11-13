@@ -19,3 +19,8 @@
 - **Two candidate designs.** Prepared two self-contained versions: `design_price_level/` (EUR 0 as a price level, with implausible free plans removed from the candidate set) and `design_free_option/` (three paid plans plus a fixed "stay free" option). Reran the design comparison, robustness check and sample-size simulation for both and updated the README.
 - **15-question variants.** Built and simulated a 15-question design for each version (`design_price_level_15q/`, `design_free_option_15q/`) to compare with 12 questions at realistic sample sizes, and added the comparison to the README.
 - **Team document.** Wrote an explainer for the team describing both options, the simulation results and the open decisions.
+
+## 13 November 2026
+- **Review.** Reran every script from a clean copy and checked that all outputs and every number in the README match.
+- **Advice on the open decisions.** Compared the two designs and 12 against 15 questions in light of the lecturer's feedback, with literature on how many choice questions respondents can answer.
+- **Final design.** After the team chose EUR 0 as a price level, 12 questions, one questionnaire and the restriction on free plans: moved the other designs to `archive/`, updated the questionnaire introduction and reran script 04, rewrote the README around the final design, and updated `references/sources.md` and the team document.
