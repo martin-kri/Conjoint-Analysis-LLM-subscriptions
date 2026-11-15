@@ -4,6 +4,8 @@ A choice-based conjoint study of AI assistant plans (ChatGPT, Gemini, Claude). I
 
 **Status (13 November 2026): the design is final.** We field `design_price_level/`: 12 questions, free as one of the three price levels (EUR 0), one questionnaire for everyone, and no "free super plans". The alternatives we considered are kept in `archive/`.
 
+**15 November 2026: the Google Form for the pilot is ready.** The survey has 13 choice questions: the 12 design questions plus one holdout question (Q13) that is left out of the model and used to check its predictions. `survey/` builds the form with one Apps Script; see `survey/README.md`.
+
 ## Research questions
 
 - How price-sensitive are people, and how much more attractive is a free plan than a paid one?
@@ -88,19 +90,20 @@ A Monte Carlo simulation draws respondents with different part-worths, simulates
 ## Planned analysis
 
 1. Descriptives: who answered, how often each level was chosen, how often a free plan was chosen.
-2. Multinomial logit, with a test for position effects and a test of price as a number against price as categories.
-3. Willingness to pay per feature. If free turns out to be valued as special (Shampanier et al. 2007), euro values are computed from the step between EUR 7.99 and EUR 20.99 only; script 03 already reports this fallback.
-4. Preference shares for market scenarios with bootstrap confidence intervals, for example today's three free tiers next to low-cost and regular plans, and a sensitivity chart.
-5. Mixed logit for differences between people; individual part-worths compared across the profile groups.
-6. Segmentation of respondents on their part-worths (PAM clustering, silhouette width), described with the profile questions.
+2. Multinomial logit on Q1 to Q12, with a test for position effects and a test of price as a number against price as categories.
+3. Holdout check: predicted shares of the three Q13 plans against the shares respondents really chose.
+4. Willingness to pay per feature. If free turns out to be valued as special (Shampanier et al. 2007), euro values are computed from the step between EUR 7.99 and EUR 20.99 only; script 03 already reports this fallback.
+5. Preference shares for market scenarios with bootstrap confidence intervals, for example today's three free tiers next to low-cost and regular plans, and a sensitivity chart.
+6. Mixed logit for differences between people; individual part-worths compared across the profile groups.
+7. Segmentation of respondents on their part-worths (PAM clustering, silhouette width), described with the profile questions.
 
 
 ## Survey protocol
 
-- Levels and wording are frozen before launch; everyone gets the same 12 questions.
+- Levels and wording are frozen before launch; everyone gets the same 13 questions: Q1 to Q12 from the design and Q13, the holdout.
 - Answers are recorded as option letters (positions), never as brand names, and every choice question is required.
 - Question order may be shuffled as long as each question keeps its own ID (Q1 to Q12).
-- Pilot with 3 to 5 people first; team members do not answer.
+- Pilot with 3 to 5 people first; team members do not answer. The pilot form has a feedback page at the end; its answers are not analysed (`survey/README.md`).
 - There is no screening. Profile questions at the end are used to compare groups: assistants used in the last month, main assistant for study or work and for everyday use, current and past paid or discounted plans, how often free limits are hit, student / working / both, field of study, age, gender.
 
 **Data format.** One row per option shown: `resp.id, ques, alt, assistant, price, usage, extras, price.num, choice`. `make_long_data()` in script 03 builds it from a table of chosen options (`Q1 ... Q12`).
@@ -120,6 +123,7 @@ A Monte Carlo simulation draws respondents with different part-worths, simulates
 | File / folder | What it is |
 |---|---|
 | `design_price_level/` | **The final design**: scripts and results |
+| `survey/` | The Google Form: question images, the Apps Script that builds the form, and how to run the pilot |
 | `archive/` | Designs we considered and did not field (see `archive/README.md`) |
 | `install_packages.R` | Installs the R packages (run once) |
 | `references/sources.md` | Price sources and literature |
