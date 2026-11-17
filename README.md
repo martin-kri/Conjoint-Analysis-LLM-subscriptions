@@ -6,6 +6,8 @@ A choice-based conjoint study of AI assistant plans (ChatGPT, Gemini, Claude). I
 
 **15 November 2026: the Google Form for the pilot is ready.** The survey has 13 choice questions: the 12 design questions plus one holdout question (Q13) that is left out of the model and used to check its predictions. `survey/` builds the form with one Apps Script; see `survey/README.md`.
 
+**17 November 2026: the pilot is done and the survey is live.** The pilot did not change the choice questions, so the same form is used for the survey: the pilot text and feedback page were removed, and two profile questions were improved, by hand in Google Forms. The script was not changed; the differences are listed in `survey/README.md`. Pilot answers are kept in the data.
+
 ## Research questions
 
 - How price-sensitive are people, and how much more attractive is a free plan than a paid one?
@@ -102,11 +104,12 @@ A Monte Carlo simulation draws respondents with different part-worths, simulates
 
 - Levels and wording are frozen before launch; everyone gets the same 13 questions: Q1 to Q12 from the design and Q13, the holdout.
 - Answers are recorded as option letters (positions), never as brand names, and every choice question is required.
-- Question order may be shuffled as long as each question keeps its own ID (Q1 to Q12).
-- Pilot with 3 to 5 people first; team members do not answer. The pilot form has a feedback page at the end; its answers are not analysed (`survey/README.md`).
-- There is no screening. Profile questions at the end are used to compare groups: assistants used in the last month, main assistant for study or work and for everyday use, current and past paid or discounted plans, how often free limits are hit, student / working / both, field of study, age, gender.
+- The question order is fixed and the same for everyone; the holdout comes last.
+- Pilot with 3 to 5 people first; team members do not answer. The pilot did not change anything respondents see before or during the choices (introduction, the 13 tables, answer options, order), so the same form was used for the survey and the pilot answers are analysed with the others.
+- There is no screening: students and workers both answer. Profile questions at the end are used to compare groups: assistants used in the last month, main assistant for study or work and for everyday use, current plans (select all: only free versions, full price, student discount, free through a student offer, trial or promotion, paid by a university or employer) and which plans, past free or discounted student plans, how often free limits are hit, studying / working / both / neither, field of study, degree (Bachelor's, Master's, PhD, other), age, gender.
+- After the pilot, two profile questions were changed by hand in Google Forms: the degree years were merged into one option per degree, and the current plan question became a select-all question, because a single answer could not record a free student plan or two plans of different kinds. Answers given before the change are recoded by rules applied to everyone, never by editing single answers (`survey/README.md`).
 
-**Data format.** One row per option shown: `resp.id, ques, alt, assistant, price, usage, extras, price.num, choice`. `make_long_data()` in script 03 builds it from a table of chosen options (`Q1 ... Q12`).
+**Data format.** One row per option shown: `resp.id, ques, alt, assistant, price, usage, extras, price.num, choice`. `make_long_data()` in script 03 builds it from a table of chosen options (`Q1 ... Q12`), made from the Google Forms export by mapping Option A/B/C to 1/2/3. `Q13` is kept apart for the holdout check.
 
 ## Limitations
 
@@ -123,7 +126,7 @@ A Monte Carlo simulation draws respondents with different part-worths, simulates
 | File / folder | What it is |
 |---|---|
 | `design_price_level/` | **The final design**: scripts and results |
-| `survey/` | The Google Form: question images, the Apps Script that builds the form, and how to run the pilot |
+| `survey/` | The Google Form: question images, the Apps Script that builds the form, the pilot, and the changes made by hand after it |
 | `archive/` | Designs we considered and did not field (see `archive/README.md`) |
 | `install_packages.R` | Installs the R packages (run once) |
 | `references/sources.md` | Price sources and literature |
