@@ -21,15 +21,33 @@ Each run creates a **new** form and spreadsheet; nothing is overwritten.
 
 - `PILOT = true` (default): the title starts with "[PILOT]" and a last page asks for feedback: time taken, device, whether the tables were readable, whether the introduction and "4x / 10x the free version" were clear, how people decided, and which questions felt strange. Send it to 3 to 5 people who are **not** in the team.
 - After the pilot, fix the wording if needed (in `../design_price_level/04_print_questionnaire.R` and `00_settings_and_helpers.R` for the plan labels, then rerun script 04 and `make_survey_assets.py`, or in the `.gs` file for the introduction and profile questions). The design itself (which plans appear in which question) does not change.
-- Set `PILOT = false`, run again, and send the new link. Pilot answers stay in the pilot spreadsheet and are not analysed.
-- Once the first real response is in, nothing in the form may change.
+- Set `PILOT = false`, run again, and send the new link. This gives a new form and link; the old form and its answers are not touched.
+- Once the survey is live, nothing respondents see before or during the choices may change.
+
+**What we did (17 November 2026).** The pilot did not change anything respondents see before or during the choices (introduction, the 13 tables, answer options, order). So we did not rerun the script: the pilot form was edited by hand in Google Forms and is used for the survey, with the same link, and the pilot answers are analysed with the others. The script was not changed, so it still builds the pilot version. Differences between the script and the form actually used:
+
+- "[PILOT]" removed from the title, the pilot sentence removed from the description, and the "Pilot feedback" page removed.
+- Degree question: options reduced to Bachelor's / Master's / PhD / Other / I do not study.
+- Current plan question: now a checkbox question, "Which of these describes your AI assistant plans right now? Select all that apply.", with the options: I only use free versions; I pay full price for a plan; I pay a student discount; I have a plan for free through a student offer, trial or promotion; I have a plan paid by my university or employer. In the pilot, a single answer could not record a free student plan (the old question asked about a "paid or discounted" plan) or two plans of different kinds.
+- The next question is now titled "If you have a plan, which one(s)?" (was "If yes, which plan(s)?").
+
+To rebuild the form actually used, run the script with `PILOT = false` and apply the last three changes by hand.
+
+**Answers given before these changes** are recoded in the analysis by rules applied to everyone, never by editing single answers:
+
+- old degree answers are merged into the new categories (every "Bachelor's, ..." becomes Bachelor's, every "Master's, ..." becomes Master's);
+- each old plan answer becomes the matching ticked option ("No, I only use free versions" becomes "I only use free versions", and so on);
+- "has a free student plan now" is built for everyone from both the current plan question and the past student plan question ("Yes, and it is still active");
+- anyone who ticks "I only use free versions" together with a plan counts as having a plan.
 
 ## What the form contains
 
 1. **Introduction**: the frozen text from script 04, plus one sentence on the course, duration and anonymity. It does not mention Google's student offers.
 2. **13 choice questions**, one page each: the image, then "Qk. Which plan would you choose?" with the answers *Option A / Option B / Option C*, required. All options look the same (no logos or brand colours), and the order is the same for everyone. Q13 is the holdout (below); respondents cannot tell it apart from the others.
-3. **Profile questions** (README, "Survey protocol"): assistants used in the last month, main assistant for study or work and for everyday use, current paid or discounted plan and which one, past free or discounted student plan and what happened after, how often free limits are hit, studying / working, field and degree, age, gender.
-4. **Pilot feedback** (pilot only).
+3. **Profile questions** (README, "Survey protocol"): assistants used in the last month, main assistant for study or work and for everyday use, current plans (select all) and which ones, past free or discounted student plan and what happened after, how often free limits are hit, studying / working / both / neither, field of study and degree, age, gender.
+4. **Pilot feedback** (pilot version only; removed from the form on 17 November).
+
+This list describes the form as used for the survey; the script still builds the pilot wording of the degree and plan questions (see "What we did" above).
 
 No names or email addresses are collected. The response spreadsheet has one column per question, titled `Q1. Which plan would you choose?` and so on, holding `Option A`, `Option B` or `Option C`. Mapping A/B/C to 1/2/3 gives the `Q1 ... Q12` table that `make_long_data()` (script 03) expects; the row number is the respondent ID. `Q13` is kept apart for the holdout check.
 
